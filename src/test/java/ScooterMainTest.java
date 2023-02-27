@@ -1,6 +1,3 @@
-package com.example.yandexscootertest;
-
-import com.example.yandexscootertest.page_object.MainPageObject;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Before;
@@ -9,6 +6,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import pageobject.MainPageObject;
 
 import static org.junit.Assert.assertEquals;
 
@@ -45,7 +43,7 @@ public class ScooterMainTest {
     }
 
     @Test
-    public void test() {
+    public void testQuestionsAboutImportant() {
         driver = new ChromeDriver();
         //Ссылка на страницу Яндекс Самокат
         driver.get("https://qa-scooter.praktikum-services.ru/");

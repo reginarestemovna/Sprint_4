@@ -1,6 +1,3 @@
-package com.example.yandexscootertest;
-
-import com.example.yandexscootertest.page_object.OrderPageObject;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Before;
@@ -10,6 +7,7 @@ import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import pageobject.OrderPageObject;
 
 import static org.junit.Assert.assertEquals;
 
@@ -67,7 +65,7 @@ public class ScooterOrderTest {
     }
 
     @Test
-    public void testTopButton() {
+    public void testTopButtonCreateOrder() {
         driver = new ChromeDriver();
         //Ссылка на страницу Яндекс Самокат
         driver.get("https://qa-scooter.praktikum-services.ru/");
@@ -77,11 +75,11 @@ public class ScooterOrderTest {
         //Нажатие кнопки "Заказать" вверху страницы
         orderPageObject.clickTopOrderButton();
 
-        test(orderPageObject);
+        createOrder(orderPageObject);
     }
 
     @Test
-    public void testBottomButton() {
+    public void testBottomButtonCreateOrder() {
         driver = new ChromeDriver();
         //Ссылка на страницу Яндекс Самокат
         driver.get("https://qa-scooter.praktikum-services.ru/");
@@ -93,10 +91,10 @@ public class ScooterOrderTest {
         //Нажатие кнопки "Заказать" внизу страницы
         orderPageObject.clickBottomOrderButton();
 
-        test(orderPageObject);
+        createOrder(orderPageObject);
     }
 
-    private void test(OrderPageObject orderPageObject) {
+    private void createOrder(OrderPageObject orderPageObject) {
         //Ожидание открытия окна офрмления заказа
         orderPageObject.waitOrderForm();
         //Установка значения в поле "Имя"

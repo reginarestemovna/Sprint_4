@@ -5,43 +5,18 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>yandexScooterTest</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <name>yandexScooterTest</name>
+    <artifactId>yandex-scooter-test</artifactId>
+    <version>1.0</version>
+    <name>sprint-4</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>4.12</junit.version>
-        <javafx.version>17.0.2</javafx.version>
-        <jupiter.version>5.8.2</jupiter.version>
         <selenium.version>3.141.59</selenium.version>
         <webdrivermanager.version>4.4.3</webdrivermanager.version>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-controls</artifactId>
-            <version>${javafx.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-fxml</artifactId>
-            <version>${javafx.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>${jupiter.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>${jupiter.version}</version>
-            <scope>test</scope>
-        </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
@@ -53,7 +28,6 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
@@ -72,26 +46,6 @@
                     <source>11</source>
                     <target>11</target>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.openjfx</groupId>
-                <artifactId>javafx-maven-plugin</artifactId>
-                <version>0.0.8</version>
-                <executions>
-                    <execution>
-                        <id>default-cli</id>
-                        <configuration>
-                            <mainClass>com.example.yandexscootertest/com.example.yandexscootertest.HelloApplication
-                            </mainClass>
-                            <launcher>app</launcher>
-                            <jlinkZipName>app</jlinkZipName>
-                            <jlinkImageName>app</jlinkImageName>
-                            <noManPages>true</noManPages>
-                            <stripDebug>true</stripDebug>
-                            <noHeaderFiles>true</noHeaderFiles>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>

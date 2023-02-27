@@ -1,4 +1,4 @@
-package com.example.yandexscootertest.page_object;
+package pageobject;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
